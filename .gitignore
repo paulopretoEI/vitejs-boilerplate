@@ -14,6 +14,9 @@ dist-ssr
 storybook-static
 package-lock.json
 
+# coverage files
+coverage
+
 # Editor directories and files
 !.vscode/extensions.json
 .idea

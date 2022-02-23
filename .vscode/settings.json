@@ -4,7 +4,6 @@
       "**/.git": true,
       "**/node_modules": true,
       "**/build": true,
-      "**/coverage": true
     },
     "editor.formatOnSave": true, // auto format the file on each save
     "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
