@@ -1,6 +1,7 @@
+import { ComponentMeta, ComponentStory } from '@storybook/react';
+import { userEvent, within } from '@storybook/testing-library';
 import React from 'react';
-import { ComponentStory, ComponentMeta } from '@storybook/react';
-import { within, userEvent } from '@storybook/testing-library';
+
 import { Page } from './Page';
 
 export default {
@@ -12,7 +13,7 @@ export default {
   },
 } as ComponentMeta<typeof Page>;
 
-const Template: ComponentStory<typeof Page> = (args) => <Page {...args} />;
+const Template: ComponentStory<typeof Page> = args => <Page {...args} />;
 
 export const LoggedOut = Template.bind({});
 
