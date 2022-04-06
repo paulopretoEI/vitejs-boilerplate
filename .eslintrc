@@ -13,7 +13,9 @@
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
-    "plugin:storybook/recommended"
+    "plugin:storybook/recommended",
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -23,7 +25,15 @@
     "ecmaVersion": 13,
     "sourceType": "module"
   },
-  "plugins": ["jsx-a11y", "react", "react-hooks", "@typescript-eslint", "simple-import-sort"],
+  "plugins": [
+    "jsx-a11y",
+    "react",
+    "react-hooks",
+    "@typescript-eslint",
+    "simple-import-sort",
+    "testing-library",
+    "jest-dom"
+  ],
   "settings": {
     "react": {
       "version": "detect"
@@ -35,21 +45,35 @@
       }
     }
   },
+  "ignorePatterns": [
+    "node_modules",
+    ".DS_Store",
+    "build",
+    "dist",
+    "dist-ssr",
+    "*.local"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
       {
-        "trailingComma": "es5",
-        "singleQuote": true,
+        "semi": true,
         "printWidth": 140,
-        "semi": true
+        "tabWidth": 2,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "useTabs": false,
+        "arrowParens": "avoid",
+        "jsxSingleQuote": true,
+        "trailingComma": "all",
+        "endOfLine": "auto"
       }
     ],
     "simple-import-sort/imports": "error",
     "simple-import-sort/exports": "error",
     "react/react-in-jsx-scope": "off",
     "react/prop-types": "off",
-    "@typescript-eslint/explicit-module-boundary-types": "off", // ["error"]
+    "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-var-requires": "error",
     "react/no-unescaped-entities": [
       "error",
@@ -66,7 +90,6 @@
         ]
       }
     ],
-    // code custom rules
     "no-undef": "error",
     "no-unused-vars": "error",
     "no-inner-declarations": "off",
@@ -74,7 +97,10 @@
     "import/extensions": "off",
     "import/prefer-default-export": "off",
     "no-console": ["error", { "allow": ["warn"] }],
-    "padding-line-between-statements": ["error", { "blankLine": "always", "prev": "*", "next": "return" }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "*", "next": "return" }
+    ],
     "react-hooks/rules-of-hooks": "error"
   }
 }
